@@ -22,7 +22,7 @@ topic = st.text_input("マインドマップのテーマを入力（例：宇宙
 if st.button("生成する") and topic and api_key:
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-2.0-flash') # モデルは必要に応じて変更
+        model = genai.GenerativeModel('gemini-1.5-flash') # モデルは必要に応じて変更
 
         # プロンプト：Graphviz形式で出力させる
         prompt = f"""
